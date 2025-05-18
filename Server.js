@@ -17,11 +17,12 @@ const PORT = process.env.PORT || 3000;
         { name: "Gamer", image:  "Gamer.jpg" },
     ];
 
-app.use(express.static('Public'));
+//Middle บอกว่าเราจะใช้ path
+app.use(express.static('PamaHam'));
 
 
 app.get('/' ,(req ,res ,next)=>{
-    res.sendFile(path.join('Public','index.html'));
+    res.sendFile(path.join('PamaHam','index.html'));
 });
 
 //Start Server
