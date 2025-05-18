@@ -17,8 +17,10 @@ const PORT = process.env.PORT || 3000;
         { name: "Gamer", image:  "Gamer.jpg" },
     ];
 
-//Middle บอกว่าเราจะใช้ path
+//Middle บอกว่าเราจะใช้ path ไหนบ้าง / Middleware = จะทํางานก่อนทุกตัว(เหมือน Constructor เลยย)
 app.use(express.static('PamaHam'));
+app.use('/Our_Big_Project/Image', express.static('Image'));
+//parameter คือ path เต็ม 2 คือ ให้หาตัวไหน
 
 
 app.get('/' ,(req ,res ,next)=>{
